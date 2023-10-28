@@ -167,7 +167,7 @@ void startBLE() //! Call this function to start BLE
 
   ESP_ERROR_CHECK(ret);
 
-  ESP_ERROR_CHECK(esp_nimble_hci_and_controller_init());
+  // ESP_ERROR_CHECK(esp_nimble_hci_and_controller_init());
 
   nimble_port_init();
   /* Initialize the NimBLE host configuration. */
@@ -216,11 +216,11 @@ void stopBLE() //! Call this function to stop BLE
   {
     nimble_port_deinit();
 
-    ret = esp_nimble_hci_and_controller_deinit();
-    if (ret != ESP_OK)
-    {
-      ESP_LOGE(tag, "esp_nimble_hci_and_controller_deinit() failed with error: %d", ret);
-    }
+    // ret = esp_nimble_hci_and_controller_deinit();
+    // if (ret != ESP_OK)
+    // {
+    //   ESP_LOGE(tag, "esp_nimble_hci_and_controller_deinit() failed with error: %d", ret);
+    // }
   }
 }
 
